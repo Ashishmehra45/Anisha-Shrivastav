@@ -33,7 +33,7 @@ const App = () => {
     e.stopPropagation();
     if (!selectedItem) return;
     setCurrentImgIndex((prev) =>
-      prev === 0 ? selectedItem.images.length - 1 : prev - 1
+      prev === 0 ? selectedItem.images.length - 1 : prev - 1,
     );
   };
 
@@ -46,7 +46,7 @@ const App = () => {
         setCurrentImgIndex((prev) => (prev + 1) % selectedItem.images.length);
       if (e.key === "ArrowLeft")
         setCurrentImgIndex((prev) =>
-          prev === 0 ? selectedItem.images.length - 1 : prev - 1
+          prev === 0 ? selectedItem.images.length - 1 : prev - 1,
         );
     };
 
@@ -77,15 +77,67 @@ const App = () => {
       gsap.set(".timeline-card", { x: -30, opacity: 0 });
       gsap.set(".press-card", { y: 50, opacity: 0 });
 
-      gsap.to(".site-header", { y: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.1 });
-      gsap.to(".hero-elem", { y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: "expo.out", delay: 0.2 });
-      gsap.to(".hero-img-container", { clipPath: "inset(0% 0% 0% 0%)", scale: 1, duration: 1.5, ease: "power4.inOut", delay: 0.4 });
+      gsap.to(".site-header", {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.1,
+      });
+      gsap.to(".hero-elem", {
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.15,
+        ease: "expo.out",
+        delay: 0.2,
+      });
+      gsap.to(".hero-img-container", {
+        clipPath: "inset(0% 0% 0% 0%)",
+        scale: 1,
+        duration: 1.5,
+        ease: "power4.inOut",
+        delay: 0.4,
+      });
 
-      gsap.to(".stat-card", { scrollTrigger: { trigger: ".stats-section", start: "top 85%" }, y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" });
-      gsap.to(".bio-text > *", { scrollTrigger: { trigger: ".bio-section", start: "top 80%" }, y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: "power2.out" });
-      gsap.to(".timeline-line", { scrollTrigger: { trigger: ".experience-section", start: "top 75%" }, scaleY: 1, duration: 1.5, ease: "power3.inOut" });
-      gsap.to(".timeline-card", { scrollTrigger: { trigger: ".experience-section", start: "top 75%" }, x: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "expo.out" });
-      gsap.to(".press-card", { scrollTrigger: { trigger: ".press-section", start: "top 85%" }, y: 0, opacity: 1, duration: 1, stagger: 0.2, ease: "power3.out" });
+      gsap.to(".stat-card", {
+        scrollTrigger: { trigger: ".stats-section", start: "top 85%" },
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+      });
+      gsap.to(".bio-text > *", {
+        scrollTrigger: { trigger: ".bio-section", start: "top 80%" },
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.15,
+        ease: "power2.out",
+      });
+      gsap.to(".timeline-line", {
+        scrollTrigger: { trigger: ".experience-section", start: "top 75%" },
+        scaleY: 1,
+        duration: 1.5,
+        ease: "power3.inOut",
+      });
+      gsap.to(".timeline-card", {
+        scrollTrigger: { trigger: ".experience-section", start: "top 75%" },
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+        ease: "expo.out",
+      });
+      gsap.to(".press-card", {
+        scrollTrigger: { trigger: ".press-section", start: "top 85%" },
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.2,
+        ease: "power3.out",
+      });
 
       const refreshST = () => ScrollTrigger.refresh();
       window.addEventListener("load", refreshST);
@@ -98,21 +150,21 @@ const App = () => {
     return () => ctx.revert();
   }, []);
 
- const pressData = [
+  const pressData = [
+    {
+      source: "MP Bhawan, Chanakyapuri, New Delhi",
+      type: "Industry Interaction",
+      title:
+        "Interactive Session on Investment Opportunities in Textile & Garment Sector",
+      description:
+        "Participated in a focused industry interaction with 60+ investors and key industry associations to explore investment opportunities in the Gwalior–Chambal region. Discussions highlighted the region's industrial land availability, skilled workforce, connectivity, and investor-friendly policy ecosystem, along with opportunities for establishing textile and garment units.",
+      images: [
+        "/Delhi/IMG-20260501-WA0021 (1).jpg",
+        "/Delhi/IMG-20260501-WA0017.jpg",
+        "/Delhi/IMG-20260501-WA0014 (1).jpg",
+      ],
+    },
 
-  {
-  source: "MP Bhawan, Chanakyapuri, New Delhi",
-  type: "Industry Interaction",
-  title: "Interactive Session on Investment Opportunities in Textile & Garment Sector",
-  description:
-    "Participated in a focused industry interaction with 60+ investors and key industry associations to explore investment opportunities in the Gwalior–Chambal region. Discussions highlighted the region's industrial land availability, skilled workforce, connectivity, and investor-friendly policy ecosystem, along with opportunities for establishing textile and garment units.",
-  images: [
-    "/Delhi/IMG-20260501-WA0021 (1).jpg",
-    "/Delhi/IMG-20260501-WA0017.jpg",
-    "/Delhi/IMG-20260501-WA0014 (1).jpg",
-  ],
-},
-    
     {
       source: "Goonj 90.8 FM",
       type: "Podcast Interview",
@@ -135,7 +187,7 @@ const App = () => {
         "/BharatTex/258A0841.JPG",
         "/BharatTex/258A0844.JPG", // Removed /public/ prefix for Vite compatibility
         "", // Removed /public/ prefix for Vite compatibility
-        ""
+        "",
       ],
     },
 
@@ -199,10 +251,30 @@ const App = () => {
             </div>
 
             <div className="hidden md:flex space-x-8 items-center font-medium text-sm text-gray-500 uppercase tracking-widest">
-              <a href="#biography" className="hover:text-[#B89955] transition-colors duration-300">Biography</a>
-              <a href="#experience" className="hover:text-[#B89955] transition-colors duration-300">Experience</a>
-              <a href="#press" className="hover:text-[#B89955] transition-colors duration-300">Press</a>
-              <a href="#correspondence" className="ml-4 px-6 py-2 bg-transparent text-[#0B192C] border border-[#0B192C] rounded hover:bg-[#0B192C] hover:text-[#B89955] transition-all duration-500">Contact</a>
+              <a
+                href="#biography"
+                className="hover:text-[#B89955] transition-colors duration-300"
+              >
+                Biography
+              </a>
+              <a
+                href="#experience"
+                className="hover:text-[#B89955] transition-colors duration-300"
+              >
+                Experience
+              </a>
+              <a
+                href="#press"
+                className="hover:text-[#B89955] transition-colors duration-300"
+              >
+                Press
+              </a>
+              <a
+                href="#correspondence"
+                className="ml-4 px-6 py-2 bg-transparent text-[#0B192C] border border-[#0B192C] rounded hover:bg-[#0B192C] hover:text-[#B89955] transition-all duration-500"
+              >
+                Contact
+              </a>
             </div>
           </div>
         </nav>
@@ -279,7 +351,10 @@ const App = () => {
       </section>
 
       {/* BIOGRAPHY SECTION */}
-      <section id="biography" className="bio-section py-24 px-6 bg-white relative scroll-mt-24">
+      <section
+        id="biography"
+        className="bio-section py-24 px-6 bg-white relative scroll-mt-24"
+      >
         <div className="max-w-4xl mx-auto bio-text relative z-10 text-center md:text-left">
           <h4 className="text-[#B89955] font-sans font-semibold tracking-[0.2em] uppercase text-xs mb-8 flex items-center justify-center md:justify-start gap-4">
             <span className="w-8 h-px bg-[#B89955]"></span> Biography
@@ -306,7 +381,10 @@ const App = () => {
       </section>
 
       {/* EXPERIENCE SECTION */}
-      <section id="experience" className="experience-section py-32 px-6 bg-[#0B192C] text-white scroll-mt-20">
+      <section
+        id="experience"
+        className="experience-section py-32 px-6 bg-[#0B192C] text-white scroll-mt-20"
+      >
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24">
           <div className="relative">
             <h2 className="text-4xl font-serif text-white mb-16 flex items-center gap-6">
@@ -318,12 +396,31 @@ const App = () => {
               <div className="timeline-line absolute left-0 top-2 bottom-0 w-px bg-gradient-to-b from-[#B89955] to-transparent"></div>
 
               {[
-                { year: "2025 – Present", role: "Executive Director", entity: "M.P. Industrial Development Corporation, Gwalior" },
-                { year: "2024 – 2025", role: "Sub Divisional Magistrate", entity: "Pipariya, Government of Madhya Pradesh" },
-                { year: "2023 – 2024", role: "Additional Deputy Commissioner", entity: "Chandigarh Administration" },
-                { year: "2021 – 2022", role: "Officer Trainee", entity: "LBSNAA, Mussoorie" },
+                {
+                  year: "2025 – Present",
+                  role: "Executive Director",
+                  entity: "M.P. Industrial Development Corporation, Gwalior",
+                },
+                {
+                  year: "2024 – 2025",
+                  role: "Sub Divisional Magistrate",
+                  entity: "Pipariya, Government of Madhya Pradesh",
+                },
+                {
+                  year: "2023 – 2024",
+                  role: "Additional Deputy Commissioner",
+                  entity: "Chandigarh Administration",
+                },
+                {
+                  year: "2021 – 2022",
+                  role: "Officer Trainee",
+                  entity: "LBSNAA, Mussoorie",
+                },
               ].map((item, idx) => (
-                <div key={idx} className="timeline-card relative group cursor-default">
+                <div
+                  key={idx}
+                  className="timeline-card relative group cursor-default"
+                >
                   <div className="absolute w-2.5 h-2.5 bg-[#0B192C] border-2 border-[#B89955] rounded-full -left-[37px] top-1.5 group-hover:bg-[#B89955] transition-colors duration-300"></div>
                   <span className="text-xs font-sans font-semibold tracking-widest text-[#B89955] mb-2 block uppercase">
                     {item.year}
@@ -377,7 +474,10 @@ const App = () => {
       </section>
 
       {/* PRESS ENGAGEMENTS */}
-      <section id="press" className="press-section py-24 md:py-32 px-6 bg-[#FAFAFA] scroll-mt-20 relative">
+      <section
+        id="press"
+        className="press-section py-24 md:py-32 px-6 bg-[#FAFAFA] scroll-mt-20 relative"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 md:mb-20">
             <h4 className="text-[#B89955] font-sans font-semibold tracking-[0.2em] uppercase text-xs mb-4">
@@ -405,7 +505,11 @@ const App = () => {
 
                   {press.images.length > 1 && (
                     <div className="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur-sm text-white text-[11px] px-2.5 py-1 rounded flex items-center gap-1.5 font-sans">
-                      <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg
+                        className="w-3.5 h-3.5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V7z" />
                       </svg>
                       <span>1/{press.images.length}</span>
@@ -432,7 +536,9 @@ const App = () => {
                   </div>
                   <div className="mt-8 pt-6 border-t border-gray-100 flex items-center text-[#0B192C] text-sm font-sans font-semibold uppercase tracking-widest group-hover:text-[#B89955] transition-colors">
                     Read More
-                    <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
+                    <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">
+                      →
+                    </span>
                   </div>
                 </div>
               </div>
@@ -455,8 +561,18 @@ const App = () => {
                 onClick={closeModal}
                 className="absolute top-4 right-4 md:top-8 md:right-8 z-50 p-2 text-white/70 hover:text-white bg-black/40 hover:bg-black/80 rounded-full transition-all"
               >
-                <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-6 h-6 md:w-8 md:h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
 
@@ -490,16 +606,36 @@ const App = () => {
                         onClick={handlePrev}
                         className="absolute left-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 text-white hover:bg-black/90 transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100"
                       >
-                        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                        <svg
+                          className="w-5 h-5 md:w-6 md:h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2.5}
+                            d="M15 19l-7-7 7-7"
+                          />
                         </svg>
                       </button>
                       <button
                         onClick={handleNext}
                         className="absolute right-4 top-1/2 -translate-y-1/2 p-2 md:p-3 rounded-full bg-black/50 text-white hover:bg-black/90 transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100"
                       >
-                        <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        <svg
+                          className="w-5 h-5 md:w-6 md:h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2.5}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </button>
                     </>
@@ -517,7 +653,7 @@ const App = () => {
                           }}
                           className={`h-2 rounded-full cursor-pointer transition-all duration-300 ${
                             dotIdx === currentImgIndex
-                              ? "bg-[#B89955] w-6" 
+                              ? "bg-[#B89955] w-6"
                               : "bg-white/40 hover:bg-white/80 w-2"
                           }`}
                         />
@@ -562,7 +698,12 @@ const App = () => {
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
             </svg>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif text-[#0B192C] mb-8">
