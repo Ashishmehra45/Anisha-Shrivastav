@@ -192,6 +192,22 @@ const App = () => {
     },
 
     {
+  source: "Diplomatic Roundtable Dialogue, Mumbai",
+  type: "Diplomatic Engagement",
+  title: "Diplomatic Roundtable on Investment Opportunities in Madhya Pradesh",
+  description:
+    "Participated in a diplomatic roundtable dialogue in Mumbai with Consuls General and diplomatic representatives from several countries, engaging in discussions on investment opportunities in Madhya Pradesh, bilateral trade, technology transfer, and cultural cooperation.",
+  images: [
+    "/mumbai/IMG_5287.JPG",
+    "/mumbai/IMG_5271.JPG",
+    "/mumbai/IMG_5270.JPG",
+    "/mumbai/IMG_5269.JPG",
+    "/mumbai/DSC00599.JPG"
+  ],
+},
+
+
+    {
       source: "Govt. Portal",
       type: "Official Engagement",
       title: "Consultation on Atmanirbharata in Defence Manufacturing",
