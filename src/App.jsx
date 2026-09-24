@@ -198,7 +198,7 @@ const App = () => {
       description:
         "Participated in the consultation on 'Atmanirbharata in Defence Manufacturing' at the MPIDC Conference Hall, Bhopal. The session convened senior government officials, industry representatives, and key stakeholders to explore opportunities for strengthening indigenous capabilities, fostering innovation, and accelerating the growth of India’s defence manufacturing sector.",
       images: [
-        "/bharatTex/258A0264.JPG",
+        "/press/258A0264.JPG",
         "/press/AN-img2.png",
         "/press/AN-img3.png",
       ],
