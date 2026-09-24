@@ -99,18 +99,20 @@ const App = () => {
   }, []);
 
  const pressData = [
-    {
-      source: "Govt. Portal",
-      type: "Official Engagement",
-      title: "Consultation on Atmanirbharata in Defence Manufacturing",
-      description:
-        "Participated in the consultation on 'Atmanirbharata in Defence Manufacturing' at the MPIDC Conference Hall, Bhopal. The session convened senior government officials, industry representatives, and key stakeholders to explore opportunities for strengthening indigenous capabilities, fostering innovation, and accelerating the growth of India’s defence manufacturing sector.",
-      images: [
-        "/bharatTex/258A0264.JPG",
-        "/press/AN-img2.png",
-        "/press/AN-img3.png",
-      ],
-    },
+
+  {
+  source: "MP Bhawan, Chanakyapuri, New Delhi",
+  type: "Industry Interaction",
+  title: "Interactive Session on Investment Opportunities in Textile & Garment Sector",
+  description:
+    "Participated in a focused industry interaction with 60+ investors and key industry associations to explore investment opportunities in the Gwalior–Chambal region. Discussions highlighted the region's industrial land availability, skilled workforce, connectivity, and investor-friendly policy ecosystem, along with opportunities for establishing textile and garment units.",
+  images: [
+    "/Delhi/IMG-20260501-WA0021 (1).jpg",
+    "/Delhi/IMG-20260501-WA0017.jpg",
+    "/Delhi/IMG-20260501-WA0014 (1).jpg",
+  ],
+},
+    
     {
       source: "Goonj 90.8 FM",
       type: "Podcast Interview",
@@ -133,6 +135,19 @@ const App = () => {
         "/bharatTex/bharat-Tex-Picsart-AiImageEnhancer.png",
         "/bharatTex/bharat-Tex-1.png", // Removed /public/ prefix for Vite compatibility
         "/bharatTex/bharat-Tex-2.png", // Removed /public/ prefix for Vite compatibility
+      ],
+    },
+
+    {
+      source: "Govt. Portal",
+      type: "Official Engagement",
+      title: "Consultation on Atmanirbharata in Defence Manufacturing",
+      description:
+        "Participated in the consultation on 'Atmanirbharata in Defence Manufacturing' at the MPIDC Conference Hall, Bhopal. The session convened senior government officials, industry representatives, and key stakeholders to explore opportunities for strengthening indigenous capabilities, fostering innovation, and accelerating the growth of India’s defence manufacturing sector.",
+      images: [
+        "/bharatTex/258A0264.JPG",
+        "/press/AN-img2.png",
+        "/press/AN-img3.png",
       ],
     },
   ];
