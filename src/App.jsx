@@ -132,9 +132,10 @@ const App = () => {
       description:
         "Represented Madhya Pradesh at the inauguration of the state pavilion at Bharat Tex 2026, held at Bharat Mandapam, New Delhi. The platform showcased the state’s robust textile ecosystem, manufacturing capabilities, and investment potential, facilitating strategic engagements with industry leaders and national stakeholders.",
       images: [
-        "/bharatTex/bharat-Tex-Picsart-AiImageEnhancer.png",
-        "/bharatTex/bharat-Tex-1.png", // Removed /public/ prefix for Vite compatibility
-        "/bharatTex/bharat-Tex-2.png", // Removed /public/ prefix for Vite compatibility
+        "/BharatTex/258A0841.JPG",
+        "/BharatTex/258A0804.CR2", // Removed /public/ prefix for Vite compatibility
+        "/BharatTex/258A0778.CR2", // Removed /public/ prefix for Vite compatibility
+        "/BharatTex/258A0732.CR2"
       ],
     },
 
