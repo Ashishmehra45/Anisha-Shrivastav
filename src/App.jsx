@@ -184,28 +184,27 @@ const App = () => {
       description:
         "Represented Madhya Pradesh at the inauguration of the state pavilion at Bharat Tex 2026, held at Bharat Mandapam, New Delhi. The platform showcased the state’s robust textile ecosystem, manufacturing capabilities, and investment potential, facilitating strategic engagements with industry leaders and national stakeholders.",
       images: [
-        "/BharatTex/258A0841.JPG",
         "/BharatTex/258A0844.JPG", // Removed /public/ prefix for Vite compatibility
-        "", // Removed /public/ prefix for Vite compatibility
-        "",
+        "/BharatTex/258A0841.JPG",
+       
       ],
     },
 
     {
-  source: "Diplomatic Roundtable Dialogue, Mumbai",
-  type: "Diplomatic Engagement",
-  title: "Diplomatic Roundtable on Investment Opportunities in Madhya Pradesh",
-  description:
-    "Participated in a diplomatic roundtable dialogue in Mumbai with Consuls General and diplomatic representatives from several countries, engaging in discussions on investment opportunities in Madhya Pradesh, bilateral trade, technology transfer, and cultural cooperation.",
-  images: [
-    "/mumbai/IMG_5287.JPG",
-    "/mumbai/IMG_5271.JPG",
-    "/mumbai/IMG_5270.JPG",
-    "/mumbai/IMG_5269.JPG",
-    "/mumbai/DSC00599.JPG"
-  ],
-},
-
+      source: "Diplomatic Roundtable Dialogue, Mumbai",
+      type: "Diplomatic Engagement",
+      title:
+        "Diplomatic Roundtable on Investment Opportunities in Madhya Pradesh",
+      description:
+        "Participated in a diplomatic roundtable dialogue in Mumbai with Consuls General and diplomatic representatives from several countries, engaging in discussions on investment opportunities in Madhya Pradesh, bilateral trade, technology transfer, and cultural cooperation.",
+      images: [
+        "/mumbai/IMG_5287.JPG",
+        "/mumbai/IMG_5271.JPG",
+        "/mumbai/IMG_5270.JPG",
+        "/mumbai/IMG_5269.JPG",
+        "/mumbai/DSC00599.JPG",
+      ],
+    },
 
     {
       source: "Govt. Portal",
